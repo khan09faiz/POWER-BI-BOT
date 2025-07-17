@@ -3,3 +3,8 @@
 2025-07-18 00:59:34,126 - enhanced_pipeline - INFO - ============================================================
 2025-07-18 00:59:34,177 - enhanced_pipeline - INFO - Initial memory usage: {'process_memory_mb': 172.15234375, 'process_memory_percent': 2.2758043777980883, 'system_memory_percent': 88.6, 'available_memory_mb': 862.92578125, 'total_memory_mb': 7564.8046875}
 2025-07-18 00:59:34,177 - enhanced_pipeline - INFO - PHASE 1: Enhanced data loading and concatenation
+2025-07-18 01:40:24,369 - enhanced_pipeline - INFO - ============================================================
+2025-07-18 01:40:24,387 - enhanced_pipeline - INFO - STARTING ENHANCED EQUIPMENT DATA PROCESSING PIPELINE
+2025-07-18 01:40:24,387 - enhanced_pipeline - INFO - ============================================================
+2025-07-18 01:40:24,452 - enhanced_pipeline - INFO - Initial memory usage: {'process_memory_mb': 171.5, 'process_memory_percent': 2.2672326098967774, 'system_memory_percent': 87.3, 'available_memory_mb': 963.93359375, 'total_memory_mb': 7564.8046875}
+2025-07-18 01:40:24,452 - enhanced_pipeline - INFO - PHASE 1: Enhanced data loading and concatenation
