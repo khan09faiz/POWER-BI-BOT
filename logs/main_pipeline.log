@@ -1,0 +1,7 @@
+2025-07-17 23:30:13,240 - main_pipeline - INFO - ============================================================
+2025-07-17 23:30:13,240 - main_pipeline - INFO - STARTING ENHANCED EQUIPMENT DATA PROCESSING PIPELINE
+2025-07-17 23:30:13,240 - main_pipeline - INFO - ============================================================
+2025-07-17 23:30:13,247 - main_pipeline - INFO - Initial memory usage: {'rss_mb': 137.91796875, 'vms_mb': 423.4453125, 'percent': 1.8231530680216257}
+2025-07-17 23:30:13,247 - main_pipeline - INFO - PHASE 1: Loading and concatenating time-series data
+2025-07-17 23:48:20,491 - main_pipeline - INFO - Concatenated dataset shape: (874326, 107)
+2025-07-17 23:48:23,023 - main_pipeline - ERROR - Pipeline failed with error: ("object of type <class 'str'> cannot be converted to int", 'Conversion failed for column date with type object')

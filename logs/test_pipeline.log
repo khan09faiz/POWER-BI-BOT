@@ -1,0 +1,19 @@
+2025-07-17 23:49:18,017 - test_pipeline - INFO - Testing pipeline with sample data
+2025-07-17 23:49:27,437 - test_pipeline - INFO - Loaded sample data: (1000, 103)
+2025-07-17 23:49:27,444 - test_pipeline - INFO - Testing data cleaning...
+2025-07-17 23:49:27,592 - test_pipeline - INFO - Cleaned data shape: (1000, 30)
+2025-07-17 23:49:27,592 - test_pipeline - INFO - Testing feature engineering...
+2025-07-17 23:49:27,641 - test_pipeline - ERROR - Test failed: 'Column not found: equipment_id'
+2025-07-17 23:50:12,015 - test_pipeline - INFO - Testing pipeline with sample data
+2025-07-17 23:50:21,292 - test_pipeline - INFO - Loaded sample data: (1000, 103)
+2025-07-17 23:50:21,292 - test_pipeline - INFO - Testing data cleaning...
+2025-07-17 23:50:21,445 - test_pipeline - INFO - Cleaned data shape: (1000, 30)
+2025-07-17 23:50:21,445 - test_pipeline - INFO - Testing feature engineering...
+2025-07-17 23:50:21,519 - test_pipeline - ERROR - Test failed: unsupported operand type(s) for +: 'int' and 'Categorical'
+2025-07-17 23:50:55,965 - test_pipeline - INFO - Testing pipeline with sample data
+2025-07-17 23:51:05,598 - test_pipeline - INFO - Loaded sample data: (1000, 103)
+2025-07-17 23:51:05,600 - test_pipeline - INFO - Testing data cleaning...
+2025-07-17 23:51:05,736 - test_pipeline - INFO - Cleaned data shape: (1000, 30)
+2025-07-17 23:51:05,736 - test_pipeline - INFO - Testing feature engineering...
+2025-07-17 23:51:05,851 - test_pipeline - INFO - Feature engineered data shape: (1000, 70)
+2025-07-17 23:51:05,886 - test_pipeline - INFO - Test completed successfully!

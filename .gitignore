@@ -1,0 +1,15 @@
+# Data files
+data/
+
+# Python virtual environment
+venv/
+*.env
+
+# Python caches
+__pycache__/
+*.pyc
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store

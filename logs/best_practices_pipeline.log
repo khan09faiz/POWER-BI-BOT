@@ -1,0 +1,4 @@
+2025-07-18 00:26:00,580 - INFO - Pipeline completed successfully
+2025-07-18 00:26:00,580 - INFO - Data quality score: 95.0/100
+2025-07-18 00:26:00,580 - INFO - Memory reduction: 26.6%
+2025-07-18 00:26:00,580 - INFO - Final dataset shape: (1000, 24)
