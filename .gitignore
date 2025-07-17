@@ -1,5 +1,5 @@
 # Data files
-data/
+dataset/
 
 # Python virtual environment
 venv/
