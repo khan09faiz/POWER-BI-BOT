@@ -42,7 +42,7 @@ from src.utils.helpers import create_backup
 try:
     from src.analysis.exploratory_data_analysis import IndustrialEDAAnalyzer
     from src.features.ml_feature_selection import BusinessDrivenFeatureSelector
-    from src.utils.performance_optimizer import PerformanceOptimizer
+    from src.utils.memory_utils import PerformanceOptimizer
     BEST_PRACTICES_AVAILABLE = True
 except ImportError as e:
     print(f"⚠️ Best practices modules not fully available: {e}")
