@@ -43,7 +43,7 @@ class ModelConfig:
 class SearchConfig:
     """Configuration for FAISS semantic search"""
     similarity_threshold: float = 0.9
-    top_k_candidates: int = 5
+    top_k_candidates: int = 1
     use_gpu_index: bool = True
     index_type: str = "IVFFlat"
     nlist: int = 100
@@ -87,7 +87,7 @@ class Settings:
     def __init__(
         self,
         use_gpu: bool = True,
-        similarity_threshold: float = 0.75,
+        similarity_threshold: float = 0.9,
         batch_size: Optional[int] = None,
         custom_model_name: Optional[str] = None
     ):

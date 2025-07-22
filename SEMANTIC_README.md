@@ -119,17 +119,14 @@ settings = Settings(
 
 ### Master File (Complete Data)
 Must contain at least:
-- Equipment identifier column (Equipment, equipment_number, etc.)
 - Equipment Type or Equipment Description (or both)
 
 ### Target File (Incomplete Data) 
 Must contain at least:
-- Equipment identifier column
 - May have missing Equipment Type and/or Equipment Description fields
 
 ### Supported Column Names
 The system auto-detects these column variations:
-- **Equipment ID**: Equipment, equipment_number, equip_no, equipment_id
 - **Equipment Type**: Equipment Type, ObjectType, equipment_type, equip_type  
 - **Equipment Description**: Equipment Description, equipment_description, description, desc
 
@@ -182,7 +179,7 @@ The completed dataset includes:
 
 ### Example Output Columns
 ```
-equipment_number | equipment_type | equipment_description | equipment_type_similarity_score | equipment_description_similarity_score
+equipment_type | equipment_description | equipment_type_similarity_score | equipment_description_similarity_score
 ```
 
 ## 🔍 Logging and Monitoring
@@ -200,23 +197,23 @@ Given ONGC equipment data:
 
 **Master File (Complete)**:
 ```csv
-equipment_number,equipment_type,equipment_description
-000000000010000001,EQERMA,EQUALIZATION TANK MIXER MOTOR
-000000000010000002,EQMRPC,100A01B-EQUALISATION TANK MIXERS
+equipment_type,equipment_description
+EQERMA,EQUALIZATION TANK MIXER MOTOR
+EQMRPC,100A01B-EQUALISATION TANK MIXERS
 ```
 
 **Target File (Incomplete)**:
 ```csv
-equipment_number,equipment_type,equipment_description
-000000000010000003,,MIXER MOTOR FOR TANK
-000000000010000004,EQMRPC,
+equipment_type,equipment_description
+,MIXER MOTOR FOR TANK
+EQMRPC,
 ```
 
 **Completed Output**:
 ```csv
-equipment_number,equipment_type,equipment_description,equipment_type_similarity_score
-000000000010000003,EQERMA,MIXER MOTOR FOR TANK,0.87
-000000000010000004,EQMRPC,100A01B-EQUALISATION TANK MIXERS,0.92
+equipment_type,equipment_description,equipment_type_similarity_score
+EQERMA,MIXER MOTOR FOR TANK,0.87
+EQMRPC,100A01B-EQUALISATION TANK MIXERS,0.92
 ```
 
 ## 🚨 Troubleshooting

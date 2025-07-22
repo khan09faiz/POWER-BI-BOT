@@ -7,8 +7,8 @@ from pathlib import Path
 from typing import Tuple, Optional, List, Dict, Any
 import logging
 
-from ..config import settings
-from ..utils import log_execution_time, default_logger
+from config import settings
+from utils import log_execution_time, default_logger
 
 
 class DataValidator:
@@ -57,10 +57,6 @@ class DataValidator:
             return False, issues
 
         column_mapping = cls.find_column_mapping(df)
-
-        # Check for equipment number (always required)
-        if 'equipment_number' not in column_mapping:
-            issues.append(f"No equipment number column found in {file_type} file")
 
         # For master file, both type and description should be available
         if file_type == "master":
@@ -138,7 +134,6 @@ class DataLoader:
 
         # Remove rows with missing critical data in master
         initial_rows = len(df)
-        df = df.dropna(subset=['equipment_number'])
 
         # For master data, we need either type or description
         df = df.dropna(subset=['equipment_type', 'equipment_description'], how='all')
@@ -164,19 +159,11 @@ class DataLoader:
         df = self.standardize_columns(df)
 
         # Ensure required columns exist (fill with NaN if missing)
-        required_columns = ['equipment_number', 'equipment_type', 'equipment_description']
+        required_columns = ['equipment_type', 'equipment_description']
         for col in required_columns:
             if col not in df.columns:
                 df[col] = pd.NA
                 self.logger.info(f"Added missing column '{col}' to target data")
-
-        # Remove rows without equipment numbers
-        initial_rows = len(df)
-        df = df.dropna(subset=['equipment_number'])
-        final_rows = len(df)
-
-        if final_rows < initial_rows:
-            self.logger.warning(f"Removed {initial_rows - final_rows} rows without equipment numbers")
 
         self.logger.info(f"Target data loaded: {len(df)} equipment records")
         return df

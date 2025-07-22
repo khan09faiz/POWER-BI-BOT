@@ -8,8 +8,8 @@ from datetime import datetime
 from typing import Optional, Dict, Any
 import logging
 
-from ..config import settings
-from ..utils import log_execution_time, default_logger
+from config import settings
+from utils import log_execution_time, default_logger
 
 
 class DataWriter:
@@ -47,7 +47,7 @@ class DataWriter:
         output_df = df.copy()
 
         # Define preferred column order
-        base_columns = ['equipment_number', 'equipment_type', 'equipment_description']
+        base_columns = ['equipment_type', 'equipment_description']
 
         # Add similarity score columns if they exist and are requested
         score_columns = []

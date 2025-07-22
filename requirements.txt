@@ -7,8 +7,9 @@ openpyxl>=3.1.0
 pyarrow>=13.0.0
 
 # Embedding and ML
-torch==2.3.0+cu129       # Requires manual install (see below)
+torch==2.3.0       # Requires manual install (see below)
 transformers>=4.35.0
+accelerate>=1.9.0   # Required for GPU device mapping with transformers
 sentence-transformers>=2.2.0
 scikit-learn>=1.3.0
 

@@ -12,8 +12,8 @@ try:
 except ImportError:
     faiss = None
 
-from ..config import settings
-from ..utils import log_execution_time, GPUMemoryMonitor, default_logger
+from config import settings
+from utils import log_execution_time, GPUMemoryMonitor, default_logger
 
 
 class FAISSSearchEngine:

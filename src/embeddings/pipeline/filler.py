@@ -7,11 +7,11 @@ from typing import Tuple, Optional, Dict, Any, List
 import logging
 from pathlib import Path
 
-from ..config import settings
-from ..utils import log_execution_time, log_pipeline_start, log_pipeline_complete, default_logger
-from ..data_processing import DataLoader, DataWriter
-from ..model import Qwen3Embedder
-from ..search import FAISSSearchEngine
+from config import settings
+from utils import log_execution_time, log_pipeline_start, log_pipeline_complete, default_logger
+from data_processing import DataLoader, DataWriter
+from model import Qwen3Embedder
+from search import FAISSSearchEngine
 
 
 class SemanticDataFiller:
@@ -61,25 +61,25 @@ class SemanticDataFiller:
     def _build_master_index(self, master_file: str) -> Tuple[pd.DataFrame, FAISSSearchEngine]:
         """Load master data and build search index"""
         # Load master data
-        self.logger.info("Loading master data...")
+        self.logger.info("Loading master data.")
         master_df = self.data_loader.load_master_data(master_file)
 
         # Initialize embedder
-        self.logger.info("Initializing embedding model...")
+        self.logger.info("Initializing embedding model.")
         embedder = Qwen3Embedder(logger=self.logger)
         embedder.load_model()
         self.embedder = embedder
 
         # Prepare texts for embedding
-        self.logger.info("Preparing master data for embedding...")
+        self.logger.info("Preparing master data for embedding.")
         master_texts = self._prepare_embedding_texts(master_df, embedder)
 
         # Generate embeddings
-        self.logger.info("Generating embeddings for master data...")
+        self.logger.info("Generating embeddings for master data.")
         master_embeddings = embedder.encode_texts(master_texts)
 
         # Build search index
-        self.logger.info("Building search index...")
+        self.logger.info("Building search index.")
         search_engine = FAISSSearchEngine(logger=self.logger)
         search_engine.build_index(master_embeddings, master_df)
         self.search_engine = search_engine
@@ -114,11 +114,11 @@ class SemanticDataFiller:
         query_texts = self._prepare_embedding_texts(missing_rows, self.embedder)
 
         # Generate embeddings for queries
-        self.logger.info("Generating embeddings for target data...")
+        self.logger.info("Generating embeddings for target data.")
         query_embeddings = self.embedder.encode_texts(query_texts)
 
         # Find matches
-        self.logger.info("Finding semantic matches...")
+        self.logger.info("Finding semantic matches.")
         matches = self.search_engine.find_best_matches(query_embeddings, missing_fields)
 
         # Fill missing fields
@@ -160,7 +160,7 @@ class SemanticDataFiller:
             master_df, search_engine = self._build_master_index(master_file)
 
             # Step 2: Load target data
-            self.logger.info("Loading target data...")
+            self.logger.info("Loading target data.")
             target_df = self.data_loader.load_target_data(target_file)
 
             # Step 3: Identify missing fields
@@ -181,7 +181,7 @@ class SemanticDataFiller:
             filled_df = self._fill_missing_fields(target_df, missing_fields)
 
             # Step 5: Save results
-            self.logger.info("Saving completed data...")
+            self.logger.info("Saving completed data.")
             output_path = self.data_writer.save_completed_data(
                 filled_df,
                 target_file,

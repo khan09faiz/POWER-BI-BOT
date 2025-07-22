@@ -9,8 +9,8 @@ import logging
 from transformers import AutoModel, AutoTokenizer
 import gc
 
-from ..config import settings
-from ..utils import log_execution_time, GPUMemoryMonitor, default_logger
+from config import settings
+from utils import log_execution_time, GPUMemoryMonitor, default_logger
 
 
 class Qwen3Embedder:
@@ -43,14 +43,14 @@ class Qwen3Embedder:
                 self.logger.info("Using CPU")
 
             # Load tokenizer
-            self.logger.info("Loading tokenizer...")
+            self.logger.info("Loading tokenizer.")
             self.tokenizer = AutoTokenizer.from_pretrained(
                 settings.model.model_name,
                 **settings.model.tokenizer_kwargs
             )
 
             # Load model with optimized settings
-            self.logger.info("Loading model...")
+            self.logger.info("Loading model.")
             model_kwargs = settings.model.model_kwargs.copy()
 
             # Optimize for 6GB VRAM
