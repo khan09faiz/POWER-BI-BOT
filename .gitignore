@@ -17,4 +17,5 @@ __pycache__/
 .DS_Store
 .kiro
 logs/
+reports/
 
