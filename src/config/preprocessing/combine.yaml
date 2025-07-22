@@ -1,4 +1,0 @@
-data_folder_path: 'dataset'
-file_extension: '*.xlsx'
-output_csv: 'combined_data.csv'
-output_parquet: 'combined_data.parquet'
