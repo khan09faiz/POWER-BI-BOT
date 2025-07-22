@@ -13,6 +13,6 @@ __pycache__/
 .vscode/
 .idea/
 .DS_Store
-
+.kiro
 logs/
 
