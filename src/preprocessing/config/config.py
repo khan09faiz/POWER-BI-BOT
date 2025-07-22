@@ -28,10 +28,10 @@ class Config:
     # Column name mappings
     COLUMN_MAPPINGS = {
         'Equipment': 'equipment_number',
-        'Equipment description': 'equipment_description',
+        'Equipment description': 'Equipment Description',
         'Created on': 'created_on',
         'Chngd On': 'changed_on',
-        'ObjectType': 'object_type',
+        'ObjectType': 'Equipment Type',
         'Manufacturer of Asset': 'manufacturer'
     }
 
