@@ -1,0 +1,132 @@
+{
+  "dataset_info": {
+    "name": "ONGC Equipment Data",
+    "description": "Processed equipment data from ONGC with standardized columns",
+    "total_records": 874326,
+    "total_columns": 13,
+    "creation_date": "2025-07-22T12:03:18.950115"
+  },
+  "columns": {
+    "equipment_number": {
+      "data_type": "object",
+      "non_null_count": 874326,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "description": "Unique identifier for each piece of equipment",
+      "unique_values": 874326
+    },
+    "equipment_description": {
+      "data_type": "object",
+      "non_null_count": 207219,
+      "null_count": 667107,
+      "null_percentage": 76.3,
+      "description": "Descriptive name or title of the equipment",
+      "unique_values": 153493
+    },
+    "created_on": {
+      "data_type": "datetime64[ns]",
+      "non_null_count": 874326,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "description": "Date when the equipment record was created"
+    },
+    "changed_on": {
+      "data_type": "datetime64[ns]",
+      "non_null_count": 809594,
+      "null_count": 64732,
+      "null_percentage": 7.4,
+      "description": "Date when the equipment record was last modified"
+    },
+    "object_type": {
+      "data_type": "category",
+      "non_null_count": 136354,
+      "null_count": 737972,
+      "null_percentage": 84.4,
+      "description": "Type or category of the equipment",
+      "unique_values": 185
+    },
+    "technical_description": {
+      "data_type": "object",
+      "non_null_count": 207219,
+      "null_count": 667107,
+      "null_percentage": 76.3,
+      "description": "Detailed technical description of the equipment",
+      "unique_values": 155082
+    },
+    "material": {
+      "data_type": "category",
+      "non_null_count": 666539,
+      "null_count": 207787,
+      "null_percentage": 23.77,
+      "description": "Material composition or specification",
+      "unique_values": 3186
+    },
+    "manufacturer": {
+      "data_type": "category",
+      "non_null_count": 121555,
+      "null_count": 752771,
+      "null_percentage": 86.1,
+      "description": "Company that manufactured the equipment",
+      "unique_values": 9457
+    },
+    "source_file": {
+      "data_type": "category",
+      "non_null_count": 874326,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "description": "No description available",
+      "unique_values": 5,
+      "sample_values": [
+        "EQUI_01.04.2000 TO 31.03.2005.xlsx",
+        "EQUI_01.04.2005 TO 31.03.2010.xlsx",
+        "EQUI_01.04.2010 TO 31.03.2015.xlsx",
+        "EQUI_01.04.2015 TO 31.03.2020.xlsx",
+        "EQUI_01.04.2020 TO 31.03.2025.xlsx"
+      ]
+    },
+    "period_label": {
+      "data_type": "category",
+      "non_null_count": 874326,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "description": "Time period label extracted from the source filename",
+      "unique_values": 5,
+      "sample_values": [
+        "01.04.2000 TO 31.03.2005",
+        "01.04.2005 TO 31.03.2010",
+        "01.04.2010 TO 31.03.2015",
+        "01.04.2015 TO 31.03.2020",
+        "01.04.2020 TO 31.03.2025"
+      ]
+    },
+    "processed_at": {
+      "data_type": "datetime64[us]",
+      "non_null_count": 874326,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "description": "No description available"
+    },
+    "missing_values_count": {
+      "data_type": "int64",
+      "non_null_count": 874326,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "description": "No description available",
+      "min_value": 0.0,
+      "max_value": 6.0,
+      "mean_value": 3.5427014637560816,
+      "median_value": 4.0
+    },
+    "completeness_ratio": {
+      "data_type": "float64",
+      "non_null_count": 874326,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "description": "No description available",
+      "min_value": 0.25,
+      "max_value": 1.0,
+      "mean_value": 0.5571623170304898,
+      "median_value": 0.5
+    }
+  }
+}

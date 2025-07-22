@@ -1,0 +1,23 @@
+{
+  "total_files_processed": 5,
+  "successful_files": 5,
+  "failed_files": [],
+  "original_total_rows": 874326,
+  "final_total_rows": 874326,
+  "columns_found": [
+    "Equipment",
+    "Equipment description",
+    "Created on",
+    "Chngd On",
+    "ObjectType",
+    "Description of technical object",
+    "Material",
+    "Manufacturer of Asset"
+  ],
+  "columns_missing": [],
+  "duplicates_removed": 0,
+  "empty_rows_removed": 0,
+  "memory_before_mb": 3357.469977378845,
+  "memory_after_mb": 155.05622005462646,
+  "processing_time_seconds": 964.9333372116089
+}
